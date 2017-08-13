@@ -1,0 +1,67 @@
+<%= form_for(source) do |f| %>
+  <% if source.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(source.errors.count, "error") %> prohibited this source from being saved:</h2>
+
+      <ul>
+      <% source.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+    <div class="field">
+      <%= f.label :url %>
+      <%= f.text_field :url %>
+    </div>
+
+    <div class="field">
+      <%= f.label :post_path %>
+      <%= f.text_field :post_path %>
+    </div>
+
+  <div class="field">
+    <%= f.label :title_path %>
+    <%= f.text_field :title_path %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_path %>
+    <%= f.text_field :image_path %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content_path %>
+    <%= f.text_field :content_path %>
+  </div>
+
+    <div class="field">
+      <%= f.label :url_path %>
+      <%= f.text_field :url_path %>
+    </div>
+    <div class="field">
+      <%= f.label :breaking_post_path %>
+      <%= f.text_field :breaking_post_path %>
+    </div>
+    <div class="field">
+      <%= f.label :breaking_url_path %>
+      <%= f.text_field :breaking_url_path %>
+    </div>
+    <div class="field">
+      <%= f.label :breaking_title_path %>
+      <%= f.text_field :breaking_title_path %>
+    </div>
+    <div class="field">
+      <%= f.label :breaking_image_path %>
+      <%= f.text_field :breaking_image_path %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

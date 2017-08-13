@@ -1,0 +1,57 @@
+<div id="root">
+</div>
+
+<script src="https://fb.me/react-0.14.0.js"></script>
+<script src="https://fb.me/react-dom-0.14.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js"></script>
+<script type="text/babel">
+    //react
+    class Counter extends React.Component{
+        constructor(props){
+            super(props);
+        }
+        render(){
+            return (
+                <div>
+                  <h1>{this.props.value}</h1>
+                  <button onClick={this.props.onClickIncrease}>+</button>
+                  <button onClick={this.props.onClickDecrease}>-</button>
+                </div>
+            );
+        }
+    }
+
+    //redux
+    function counter(state, action){
+        if(typeof state === 'undefined'){
+            state = 0;
+        }
+        switch(action.type){
+            case 'INCREMENT':
+                console.log('increased called');
+                return state + 1;
+            case 'DECREMENT':
+                console.log('decreased called');
+                return state - 1;
+            default:
+                console.log('default called');
+                return state;
+        }
+    }
+
+    let store = Redux.createStore(counter);
+
+    function renderReact(){
+        ReactDOM.render(
+            <Counter
+                value={store.getState()}
+                onClickIncrease={() => {store.dispatch({type: 'INCREMENT'})}}
+                onClickDecrease={() => {store.dispatch({type: 'DECREMENT'})}} />,
+            document.getElementById('root')
+        );
+    }
+    console.log(store.getState());
+    renderReact();
+    store.subscribe(renderReact);
+</script>

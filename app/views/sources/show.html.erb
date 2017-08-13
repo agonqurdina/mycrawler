@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="wrapper">
+
+<p>
+  <strong>Name:</strong>
+  <%= @source.name %>
+</p>
+
+<p>
+  <strong>Title path:</strong>
+  <%= @source.title_path %>
+</p>
+
+<p>
+  <strong>Image path:</strong>
+  <%= @source.image_path %>
+</p>
+
+<p>
+  <strong>Content path:</strong>
+  <%= @source.content_path %>
+</p>
+
+</div>
+
+<div id="comments-main">
+  <%= react_component 'Comments', source_id: @source.id, user_id: current_user.id, auth_token: {:name => request_forgery_protection_token.to_s, :value => form_authenticity_token} %>
+</div>
+
+<%= link_to 'Edit', edit_source_path(@source) %> |
+<%= link_to 'Back', sources_path %>

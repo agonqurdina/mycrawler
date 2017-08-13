@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails MyCrawler: development" uuid="f5777c6d-e937-47df-a8f2-c5042c381b8d">
+      <database-info product="PostgreSQL" version="9.5.6" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>agonq</user-name>
+      <introspection-schemas>project_development:public</introspection-schemas>
+      <resolve-scope>project_development:agonq,public</resolve-scope>
+      <unqualified-resolve-schemas>project_development:agonq,public</unqualified-resolve-schemas>
+    </data-source>
+    <data-source name="Rails MyCrawler: test" uuid="8565c637-61bb-4fb9-afe5-6f28918b24f1">
+      <database-info product="PostgreSQL" version="9.5.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>agonq</user-name>
+      <introspection-schemas>project_test:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails MyCrawler: cucumber" uuid="15248a4b-ea05-4770-96bf-d988a7781aba">
+      <database-info product="PostgreSQL" version="9.5.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>agonq</user-name>
+      <introspection-schemas>project_test:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails MyCrawler: production" uuid="d9a55c1c-1880-4084-a073-a333b3e37a75">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>agonq</user-name>
+    </data-source>
+  </component>
+</project>
